@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 mongoose
-    .connect("mongodb+srv://razvanpana20:m9h9myUBtwlVext3@cluster0.bspo0kt.mongodb.net/loginRegister")
+    .connect(process.env.MONGODB_CONNECTION)
     .then(() => {
         console.log("Successfully connected to the database!");
     })
